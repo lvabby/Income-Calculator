@@ -1,0 +1,28 @@
+import java.util.Scanner;
+ public class IncomeTax1
+{
+   public static void main(String[] args) 
+{ 
+ Scanner input = new Scanner(System.in);
+   System.out.print("Enter Annual Income ");
+   double Income = input.nextDouble();
+   if (Income<=9075)  
+  { System.out.printf("Your Annual Income is %f%n", Income - (Income*.10) );  
+   }      else 
+      if (Income<=36900)
+    {System.out.printf("Your Annual Income is %f%n", Income - ((9075*.10)+(Income - 9075)*.15) );
+   }   
+   else if (Income<=89350)
+   {System.out.printf("Your Annual Income is %f%n", Income - ((9075*.10)+((36900 - 9075)*.15) +(Income-36900)*.25) );
+   }  
+   else if (Income<=186350)
+   {System.out.printf("Your Annual Income is %f%n", Income - ((9075*.10)+((36900 - 9075)*.15) +((89350-36900)*.25) +(Income-89350)*.28) );
+   }
+   else if(Income<=405100)
+   {System.out.printf("Your Annual Income is %f%n", Income - ((9075*.10)+((36900 - 9075)*.15) +((89350-36900)*.25) +(186350-89350)*.28 +(Income-186350)*.33) );
+   }   
+   else if(Income<=406750)
+   {System.out.printf("Your Annual Income is %f%n", Income - ((9075*.10)+((36900 - 9075)*.15) +((89350-36900)*.25) +(186350-89350)*.28 +((405100-186350)*.33) + (Income-186350)*.35) );
+   }  
+   }
+}
